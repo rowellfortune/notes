@@ -23,3 +23,4 @@ export default class StorageStack extends sst.Stack {
 
   }
 }
+
