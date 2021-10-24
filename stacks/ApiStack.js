@@ -1,6 +1,4 @@
 import * as sst from "@serverless-stack/resources";
-import { HttpMethod } from "@aws-cdk/aws-apigatewayv2";
-
 export default class ApiStack extends sst.Stack {
   // Public reference to the API
   api;
