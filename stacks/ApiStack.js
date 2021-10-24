@@ -1,4 +1,5 @@
 import * as sst from "@serverless-stack/resources";
+import { HttpMethod } from "@aws-cdk/aws-apigatewayv2";
 
 export default class ApiStack extends sst.Stack {
   // Public reference to the API
@@ -18,6 +19,7 @@ export default class ApiStack extends sst.Stack {
           STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
         },
       },
+      cors: true,
       routes: {
         "POST   /notes": "src/create.main",
         "GET    /notes/{id}": "src/get.main",
