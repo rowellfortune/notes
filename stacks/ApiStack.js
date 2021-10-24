@@ -11,6 +11,7 @@ export default class ApiStack extends sst.Stack {
 
     // Create the API
     this.api = new sst.Api(this, "Api", {
+      defaultAuthorizationType: "AWS_IAM",
       defaultFunctionProps: {
         environment: {
           TABLE_NAME: table.tableName,
@@ -34,3 +35,4 @@ export default class ApiStack extends sst.Stack {
     });
   }
 }
+
